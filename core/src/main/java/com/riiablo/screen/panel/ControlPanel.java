@@ -272,8 +272,8 @@ public class ControlPanel extends Table implements Disposable, EscapeController 
       if (label.isVisible()) {
         label.setX(getX());
         label.setText(Riiablo.string.format("panelhealth",
-            (int) Riiablo.charData.getStats().get(Stat.hitpoints).asFixed(),
-            (int) Riiablo.charData.getStats().get(Stat.maxhp).asFixed()));
+            (int) Riiablo.charData.getStats().base().get(Stat.hitpoints).asFixed(),
+            (int) Riiablo.charData.getStats().base().get(Stat.maxhp).asFixed()));
         label.draw(batch, a);
       }
     }
@@ -307,8 +307,8 @@ public class ControlPanel extends Table implements Disposable, EscapeController 
       if (label.isVisible()) {
         label.setX(getX() - 32);
         label.setText(Riiablo.string.format("panelmana",
-            (int) Riiablo.charData.getStats().get(Stat.mana).asFixed(),
-            (int) Riiablo.charData.getStats().get(Stat.maxmana).asFixed()));
+            (int) Riiablo.charData.getStats().base().get(Stat.mana).asFixed(),
+            (int) Riiablo.charData.getStats().base().get(Stat.maxmana).asFixed()));
         label.draw(batch, a);
       }
     }

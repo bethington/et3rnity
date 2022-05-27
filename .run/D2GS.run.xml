@@ -1,5 +1,9 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="D2GS" type="Application" factoryName="Application" folderName="server">
+    <envs>
+      <env name="D2_HOME" value="D:\diablo2" />
+      <env name="D2_SAVE" value="D:\diablo2\Save" />
+    </envs>
     <option name="MAIN_CLASS_NAME" value="com.riiablo.server.d2gs.D2GS" />
     <module name="riiablo.server.d2gs.main" />
     <option name="PROGRAM_PARAMETERS" value="-seed 0 -diff 0 -home C:\diablo" />

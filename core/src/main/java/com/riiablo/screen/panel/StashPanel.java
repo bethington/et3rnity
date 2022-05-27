@@ -78,7 +78,7 @@ public class StashPanel extends WidgetGroup implements Disposable, ItemGrid.Grid
         getHeight() - inventory.gridTop - grid.getHeight());
     addActor(grid);
 
-    Label stashgold = new Label(Integer.toString(Riiablo.charData.getStats().get(Stat.goldbank).asInt()), Riiablo.fonts.font16);
+    Label stashgold = new Label(Integer.toString(Riiablo.charData.getStats().base().get(Stat.goldbank).asInt()), Riiablo.fonts.font16);
     stashgold.setSize(150, 16);
     stashgold.setPosition(98, 393);
     addActor(stashgold);

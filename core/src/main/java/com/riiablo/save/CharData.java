@@ -359,13 +359,13 @@ public class CharData implements ItemData.UpdateListener, Pool.Poolable {
     assert itemData.stats == statData;
 
     // FIXME: This corrects a mismatch between max and current, algorithm should be tested later for correctness in other cases
-    statData.set(Stat.stamina, Stat.maxstamina);
-    statData.set(Stat.hitpoints, Stat.maxhp);
-    statData.set(Stat.mana, Stat.maxmana);
+    statData.base().set(Stat.stamina, Stat.maxstamina);
+    statData.base().set(Stat.hitpoints, Stat.maxhp);
+    statData.base().set(Stat.mana, Stat.maxmana);
 
     // This appears to be hard-coded in the original client
-    int dex = statData.get(Stat.dexterity).asInt();
-    StatRef armorclass = statData.get(Stat.armorclass);
+    int dex = statData.base().get(Stat.dexterity).asInt();
+    StatRef armorclass = statData.base().get(Stat.armorclass);
     armorclass.add(dex / 4);
     armorclass.forceUnmodified();
 

@@ -1,5 +1,9 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="desktop (debug) (853x480)" type="Application" factoryName="Application" folderName="desktop (debug)">
+    <envs>
+      <env name="D2_HOME" value="D:\diablo2" />
+      <env name="D2_SAVE" value="D:\diablo2\Save" />
+    </envs>
     <option name="MAIN_CLASS_NAME" value="com.riiablo.DesktopLauncher" />
     <module name="riiablo.desktop.main" />
     <option name="PROGRAM_PARAMETERS" value="--viewport 853x480 --windowed --fps --log-level debug" />

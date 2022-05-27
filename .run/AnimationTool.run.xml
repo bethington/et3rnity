@@ -1,5 +1,9 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="AnimationTool" type="Application" factoryName="Application" folderName="tools" singleton="true">
+    <envs>
+      <env name="D2_HOME" value="D:\diablo2" />
+      <env name="D2_SAVE" value="D:\diablo2\Save" />
+    </envs>
     <option name="MAIN_CLASS_NAME" value="com.riiablo.AnimationTool" />
     <module name="riiablo.tools.old.main" />
     <option name="PROGRAM_PARAMETERS" value="&quot;C:\Program Files (x86)\Steam\steamapps\common\Diablo II&quot;" />

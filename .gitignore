@@ -3,6 +3,7 @@
 .gradle/
 gradle-app.setting
 build/
+gen/
 
 ## IntelliJ, Android Studio:
 .idea/*

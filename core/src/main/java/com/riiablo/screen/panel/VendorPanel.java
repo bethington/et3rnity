@@ -224,7 +224,7 @@ public class VendorPanel extends WidgetGroup implements Disposable {
     goldbankLabel.setPosition(20, 57);
     addActor(goldbankLabel);
 
-    Label goldbank = new Label(Integer.toString(Riiablo.charData.getStats().get(Stat.goldbank).asInt()), Riiablo.fonts.font16);
+    Label goldbank = new Label(Integer.toString(Riiablo.charData.getStats().base().get(Stat.goldbank).asInt()), Riiablo.fonts.font16);
     goldbank.setSize(goldbankLabel.getWidth(), goldbankLabel.getHeight());
     goldbank.setPosition(goldbankLabel.getX(), goldbankLabel.getY());
     goldbank.setAlignment(Align.right);

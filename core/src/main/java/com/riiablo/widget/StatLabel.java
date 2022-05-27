@@ -33,7 +33,7 @@ public class StatLabel extends Label {
   }
 
   private void updateValue() {
-    StatRef s = attrs.get(stat);
+    StatRef s = attrs.base().get(stat);
     int curValue = s.asInt();
     if (value != curValue) {
       value = curValue;

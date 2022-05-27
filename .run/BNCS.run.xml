@@ -1,5 +1,9 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="BNCS" type="Application" factoryName="Application" folderName="server">
+    <envs>
+      <env name="D2_HOME" value="D:\diablo2" />
+      <env name="D2_SAVE" value="D:\diablo2\Save" />
+    </envs>
     <option name="MAIN_CLASS_NAME" value="com.riiablo.server.bncs.Main" />
     <module name="riiablo.server.bncs.main" />
     <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/assets" />

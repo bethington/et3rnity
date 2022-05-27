@@ -281,7 +281,7 @@ public class InventoryPanel extends WidgetGroup implements Disposable, ItemGrid.
         getHeight() - inventory.gridTop - grid.getHeight());
     addActor(grid);
 
-    Label invgold = new Label(Integer.toString(Riiablo.charData.getStats().get(Stat.gold).asInt()), Riiablo.fonts.font16);
+    Label invgold = new Label(Integer.toString(Riiablo.charData.getStats().base().get(Stat.gold).asInt()), Riiablo.fonts.font16);
     invgold.setSize(88, 16);
     invgold.setPosition(109, 24);
     addActor(invgold);

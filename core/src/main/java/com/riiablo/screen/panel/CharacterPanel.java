@@ -68,14 +68,14 @@ public class CharacterPanel extends WidgetGroup implements Disposable {
     level.setPosition(12, getHeight() - 65);
     level.setSize(42, 33);
     level.add(new Label(4057, Riiablo.fonts.ReallyTheLastSucker)).row();
-    level.add(new Label(Integer.toString(Riiablo.charData.getStats().get(Stat.level).asInt()), Riiablo.fonts.font16)).growY().row();
+    level.add(new Label(Integer.toString(Riiablo.charData.getStats().base().get(Stat.level).asInt()), Riiablo.fonts.font16)).growY().row();
     addActor(level);
 
     Table exp = new Table();
     exp.setPosition(66, getHeight() - 65);
     exp.setSize(114, 33);
     exp.add(new Label(4058, Riiablo.fonts.ReallyTheLastSucker)).row();
-    exp.add(new Label(NumberFormat.getInstance(Cvars.Client.Locale.get()).format(Riiablo.charData.getStats().get(Stat.experience).asLong()), Riiablo.fonts.font16)).growY().row();
+    exp.add(new Label(NumberFormat.getInstance(Cvars.Client.Locale.get()).format(Riiablo.charData.getStats().base().get(Stat.experience).asLong()), Riiablo.fonts.font16)).growY().row();
     addActor(exp);
 
     Label clazz = new Label(Riiablo.charData.classId.name, Riiablo.fonts.font16);
@@ -267,13 +267,13 @@ public class CharacterPanel extends WidgetGroup implements Disposable {
 
     if (!stat.entry().maxstat.isEmpty()) {
       short id = Stat.index(stat.entry().maxstat);
-      StatRef maxstat = Riiablo.charData.getStats().get(id);
+      StatRef maxstat = Riiablo.charData.getStats().base().get(id);
       if (maxstat != null && value >= maxstat.asInt()) {
         return Riiablo.colors.gold;
       }
     }
 
-    if (mod && Riiablo.charData.getStats().get(stat.id()).modified()) {
+    if (mod && Riiablo.charData.getStats().base().get(stat.id()).modified()) {
       return Riiablo.colors.blue;
     }
 
